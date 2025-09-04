@@ -234,28 +234,62 @@ padding-top: 25px;
     width: 45%;
   }
 }
+/* ===== Unified Responsive Media Queries (All Devices + iOS) ===== */
 
-/* Tablets */
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px;
-  }
-  .nav-search {
-    width: 100%;
-    margin: 10px 0;
-  }
-  .panel-ops {
-    display: none; /* hide extra options */
-  }
-  .box {
-    width: 48%;
+/* Very Large Screens (Desktops > 1440px) */
+@media screen and (min-width: 1440px) {
+  .shop-section {
+    max-width: 1400px;
+    margin: auto;
   }
 }
 
-/* Mobile */
-@media screen and (max-width: 480px) {
+/* Medium Laptops (1025px – 1439px) */
+@media screen and (max-width: 1439px) and (min-width: 1025px) {
+  .box {
+    width: 22%;
+  }
+  .nav-search {
+    width: 550px;
+  }
+}
+
+/* Tablets (768px – 1024px, includes iPads) */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .nav-search {
+    width: 80%;
+    margin: 10px 0;
+  }
+  .box {
+    width: 45%;
+  }
+  .hero-section {
+    height: 300px;
+  }
+}
+
+/* Small Tablets & Large Phones (600px – 767px) */
+@media screen and (max-width: 767px) and (min-width: 600px) {
+  .box {
+    width: 46%;
+  }
+  .hero-section {
+    height: 250px;
+  }
+  .nav-search {
+    width: 90%;
+  }
+  .panel-ops {
+    display: none; /* hide extra menu items */
+  }
+}
+
+/* Mobiles (481px – 599px) */
+@media screen and (max-width: 599px) and (min-width: 481px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -268,8 +302,7 @@ padding-top: 25px;
     width: 100%;
   }
   .hero-section {
-    height: 200px;
-    background-position: center;
+    height: 220px;
   }
   .box {
     width: 100%;
@@ -280,39 +313,56 @@ padding-top: 25px;
     height: auto;
     padding: 20px 0;
   }
-  ul {
-    margin-top: 10px;
-  }
 }
 
-/* iOS Specific Tweaks (Retina displays & iPhones) */
-
-/* iPhone SE / small iPhones */
-@media screen and (max-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
+/* Extra Small Devices (320px – 480px, includes iPhone SE, Mini) */
+@media screen and (max-width: 480px) and (min-width: 320px) {
+  .navbar {
+    flex-direction: column;
+    padding: 8px;
+  }
   .nav-search {
+    width: 100%;
     font-size: 0.85rem;
+    margin: 8px 0;
+  }
+  .hero-section {
+    height: 180px;
+    background-position: center;
   }
   .add-second {
     font-size: 1.2rem;
   }
+  .box {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .foot-panel2 {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
-/* iPhone Pro Max / Large phones */
-@media screen and (device-width: 430px) and (-webkit-min-device-pixel-ratio: 3) {
+/* Ultra Small Phones (< 320px) */
+@media screen and (max-width: 319px) {
+  body {
+    font-size: 12px;
+  }
   .nav-search {
-    height: 35px;
+    font-size: 0.75rem;
   }
   .box {
     width: 100%;
   }
 }
 
-/* iPads */
-@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
-  .box {
-    width: 45%;
-  }
-  .nav-search {
-    width: 80%;
+/* Safe-area support for iPhones with notches (X, 11, 12, 13, 14, etc.) */
+@supports (padding: max(0px)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }
+
