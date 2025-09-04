@@ -223,3 +223,96 @@ padding-top: 25px;
 .copyright {
   padding-top: 5px;
 }
+/* ========== Responsive Design ========== */
+
+/* Large Tablets / Small Laptops */
+@media screen and (max-width: 1024px) {
+  .nav-search {
+    width: 500px;
+  }
+  .box {
+    width: 45%;
+  }
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+  .nav-search {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .panel-ops {
+    display: none; /* hide extra options */
+  }
+  .box {
+    width: 48%;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  .nav-logo {
+    margin-bottom: 10px;
+  }
+  .nav-search {
+    width: 100%;
+  }
+  .hero-section {
+    height: 200px;
+    background-position: center;
+  }
+  .box {
+    width: 100%;
+  }
+  .foot-panel2 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px 0;
+  }
+  ul {
+    margin-top: 10px;
+  }
+}
+
+/* iOS Specific Tweaks (Retina displays & iPhones) */
+
+/* iPhone SE / small iPhones */
+@media screen and (max-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav-search {
+    font-size: 0.85rem;
+  }
+  .add-second {
+    font-size: 1.2rem;
+  }
+}
+
+/* iPhone Pro Max / Large phones */
+@media screen and (device-width: 430px) and (-webkit-min-device-pixel-ratio: 3) {
+  .nav-search {
+    height: 35px;
+  }
+  .box {
+    width: 100%;
+  }
+}
+
+/* iPads */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .box {
+    width: 45%;
+  }
+  .nav-search {
+    width: 80%;
+  }
+}
