@@ -223,46 +223,47 @@ padding-top: 25px;
 .copyright {
   padding-top: 5px;
 }
-/* ========== Responsive Design ========== */
-
-/* Large Tablets / Small Laptops */
-@media screen and (max-width: 1024px) {
-  .nav-search {
-    width: 500px;
-  }
-  .box {
-    width: 45%;
-  }
-}
-/* ===== Unified Responsive Media Queries (All Devices + iOS) ===== */
-
-/* Very Large Screens (Desktops > 1440px) */
-@media screen and (min-width: 1440px) {
-  .shop-section {
-    max-width: 1400px;
-    margin: auto;
-  }
-}
-
-/* Medium Laptops (1025px – 1439px) */
-@media screen and (max-width: 1439px) and (min-width: 1025px) {
-  .box {
-    width: 22%;
-  }
-  .nav-search {
-    width: 550px;
-  }
-}
-/* Smartphones (portrait and landscape, up to 600px) */
-@media screen and (max-width: 600px) {
-  .navbar, .panel {
-    flex-direction: column;
+/* Small devices (phones, 320px and up) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
     height: auto;
-    align-items: flex-start;
+    padding: 10px 0;
+  }
+  .nav-logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
+  .nav-address, .nav-signin, .nav-return, .nav-cart {
+    flex: 1 1 45%;
+    text-align: center;
+    margin: 5px 0;
   }
   .nav-search {
     width: 100%;
     margin: 10px 0;
+    background-color: pink; /* keep your color */
+  }
+  .search-input {
+    font-size: 0.9rem;
+  }
+  .panel {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 5px;
+  }
+  .panel-ops {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  .panel-deals {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    text-align: center;
   }
   .shop-section {
     flex-direction: column;
@@ -273,90 +274,114 @@ padding-top: 25px;
     height: auto;
     margin-top: 15px;
   }
-  .hero-section {
+  .box-img {
     height: 200px;
   }
-  .hero-msg {
-    font-size: 0.75rem;
-    width: 95%;
-  }
-  .foot-panel2 {
+  footer .foot-panel2 {
     flex-direction: column;
     height: auto;
-    align-items: flex-start;
-    padding: 20px;
+    padding: 20px 0;
   }
-  ul {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  footer .foot-panel2 ul {
+    margin: 15px 0;
+    text-align: center;
+  }
+  .foot-panel3 .logo {
+    width: 80px;
+    height: 40px;
+  }
+  .foot-panel4 {
+    font-size: 0.6rem;
+    padding: 10px 5px;
   }
 }
 
-/* Tablets (portrait and landscape, 601px to 900px) */
-@media screen and (min-width: 601px) and (max-width: 900px) {
+/* Medium devices (tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 0;
+  }
+  .nav-logo {
+    width: 90px;
+    margin-bottom: 10px;
+  }
+  .nav-address, .nav-signin, .nav-return, .nav-cart {
+    flex: 1 1 40%;
+    text-align: center;
+    margin: 5px 0;
+  }
   .nav-search {
-    width: 350px;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .search-input {
+    font-size: 1rem;
+  }
+  .panel {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 5px;
+  }
+  .panel-ops {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .panel-deals {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  .shop-section {
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
   .box {
     width: 45%;
-    height: 350px;
+    height: auto;
+    margin-top: 15px;
   }
-  .hero-section {
+  .box-img {
     height: 250px;
   }
-  .foot-panel2 {
+  footer .foot-panel2 {
     flex-wrap: wrap;
     height: auto;
+    padding: 20px 0;
+  }
+  footer .foot-panel2 ul {
+    margin: 15px 10px;
+    text-align: left;
+    flex: 1 1 45%;
+  }
+  .foot-panel3 .logo {
+    width: 90px;
+    height: 45px;
+  }
+  .foot-panel4 {
+    font-size: 0.65rem;
+    padding: 10px 5px;
   }
 }
 
-/* Large Tablets / Small Laptops (901px to 1024px) */
-@media screen and (min-width: 901px) and (max-width: 1024px) {
-  .nav-search {
-    width: 450px;
+/* Large devices (desktops, 769px and up) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .shop-section {
+    justify-content: space-evenly;
   }
   .box {
     width: 30%;
-    height: 380px;
+    height: 400px;
   }
-}
-
-/* Extra Large Screens (Desktops > 1800px) */
-@media screen and (min-width: 1800px) {
-  .shop-section {
-    max-width: 1700px;
-    margin: auto;
+  .box-img {
+    height: 280px;
   }
-  .box {
-    width: 20%;
-  }
-}
-
-/* iOS and Android specific tweaks for mobile phones */
-@media screen and (max-width: 600px) and (orientation: portrait) {
-  body {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-    font-size: 16px;
-  }
-  .box-content h2 {
-    font-size: 1.1rem;
-  }
-  .nav-search {
-    min-width: 200px;
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 600px) and (orientation: landscape) {
-  .navbar {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: auto;
-  }
-  .box {
-    width: 48%;
-    margin: 1%;
+  footer .foot-panel2 ul {
+    flex: 1 1 22%;
+    margin: 20px 10px;
   }
 }
