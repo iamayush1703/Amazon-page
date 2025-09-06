@@ -8,7 +8,7 @@
   align-items: center;
   z-index: 9999;
   animation: fadeOut 1s ease forwards;
-  animation-delay: 0.8s;
+  animation-delay: 0.1s;
 }
 
 .splash-logo {
@@ -224,7 +224,7 @@ footer {
   grid-template-rows: 1fr 1fr;
   gap: 32px 48px;
   justify-items: center;
-  align-items: start;
+  align-items: center;
   padding: 32px 5vw;
   height: auto;
 }
@@ -259,30 +259,35 @@ footer {
 
 @media screen and (max-width: 900px) {
   .foot-panel2 {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 8vw; /* More space from sides */
     gap: 20px;
-    padding: 24px 3vw;
   }
   .foot-panel2 ul {
-    max-width: 100%;
-  }
-  .foot-panel2 ul:nth-child(n) {
-    grid-column: 1;
-    grid-row: auto;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 600px) {
   .foot-panel2 {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 6vw; /* Even more space from sides */
     gap: 12px;
-    padding: 16px 2vw;
   }
   .foot-panel2 ul {
-    max-width: 100%;
-    margin-top: 10px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
   }
 }
 .foot-panel3 {
