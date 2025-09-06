@@ -223,142 +223,96 @@ padding-top: 25px;
 .copyright {
   padding-top: 5px;
 }
-/* ===== Responsive CSS ===== */
+/* ========== Responsive Design ========== */
 
-/* For Tablets (max-width: 1024px) */
+/* Large Tablets / Small Laptops */
 @media screen and (max-width: 1024px) {
   .nav-search {
     width: 500px;
   }
-  .panel-ops {
-    font-size: 0.8rem;
-    width: 75%;
-  }
   .box {
-    width: 45%; /* 2 boxes in a row */
+    width: 45%;
   }
 }
 
-/* For Mobile Landscape & Small Tablets (max-width: 768px) */
+/* Tablets */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
     height: auto;
     padding: 10px;
-    justify-content: space-between;
   }
-
   .nav-search {
     width: 100%;
-    margin-top: 10px;
+    margin: 10px 0;
   }
-
-  .panel {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px;
-  }
-
   .panel-ops {
-    width: 100%;
-    font-size: 0.8rem;
-    margin-top: 5px;
-    text-align: center;
+    display: none; /* hide extra options */
   }
-
-  .shop-section {
-    flex-direction: row;
-    justify-content: center;
-  }
-
   .box {
-    width: 45%; /* 2 per row */
-  }
-
-  .hero-section {
-    height: 250px;
-  }
-
-  .hero-msg {
-    width: 90%;
-    font-size: 0.8rem;
-  }
-
-  .foot-panel2 {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 20px;
-  }
-
-  .foot-panel2 ul {
-    width: 45%;
-    margin-bottom: 20px;
+    width: 48%;
   }
 }
 
-/* For Mobile Portrait (max-width: 480px) */
+/* Mobile */
 @media screen and (max-width: 480px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    height: auto;
     padding: 10px;
   }
-
+  .nav-logo {
+    margin-bottom: 10px;
+  }
   .nav-search {
-    flex-direction: row;
     width: 100%;
-    margin: 10px 0;
   }
-
-  .nav-logo,
-  .nav-address,
-  .nav-signin,
-  .nav-return,
-  .nav-cart {
-    margin: 5px 0;
-  }
-
-  .panel {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    height: auto;
-  }
-
-  .panel-ops {
-    width: 100%;
-    font-size: 0.75rem;
-    margin-top: 5px;
-    text-align: left;
-  }
-
-  .box {
-    width: 90%; /* single column */
-    height: auto;
-  }
-
   .hero-section {
     height: 200px;
+    background-position: center;
   }
-
-  .hero-msg {
-    width: 95%;
-    font-size: 0.75rem;
-  }
-
-  .foot-panel2 ul {
+  .box {
     width: 100%;
   }
-
-  .foot-panel4 {
-    font-size: 0.6rem;
+  .foot-panel2 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px 0;
+  }
+  ul {
+    margin-top: 10px;
   }
 }
 
-/* Special Fix for iOS Safari */
-@supports (-webkit-touch-callout: none) {
-  body {
-    -webkit-text-size-adjust: 100%;
+/* iOS Specific Tweaks (Retina displays & iPhones) */
+
+/* iPhone SE / small iPhones */
+@media screen and (max-device-width: 375px) and (-webkit-min-device-pixel-ratio: 2) {
+  .nav-search {
+    font-size: 0.85rem;
+  }
+  .add-second {
+    font-size: 1.2rem;
+  }
+}
+
+/* iPhone Pro Max / Large phones */
+@media screen and (device-width: 430px) and (-webkit-min-device-pixel-ratio: 3) {
+  .nav-search {
+    height: 35px;
+  }
+  .box {
+    width: 100%;
+  }
+}
+
+/* iPads */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .box {
+    width: 45%;
+  }
+  .nav-search {
+    width: 80%;
   }
 }
