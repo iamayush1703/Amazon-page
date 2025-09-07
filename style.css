@@ -372,7 +372,7 @@ footer {
   }
   .hero-section {
     height: 40vh;
-    max-height: 280px;
+    max-height: 200px;
     background-size: contain;  
     background-color: #e2e7e6;
   }
