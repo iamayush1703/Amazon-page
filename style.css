@@ -329,7 +329,7 @@ footer {
   }
   .hero-section {
     height: 55vh;
-    max-height: 260px;
+    max-height: 360px;
   }
 }
 
@@ -352,7 +352,7 @@ footer {
   }
   .hero-section {
     height: 50vh;
-    max-height: 320px;
+    max-height: 220px;
   }
 }
 
